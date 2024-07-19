@@ -1,0 +1,18 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">USUARIO DESLOGUEADO</h1>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+{% csrf_token%}
+<h2>Te desolgueaste exitosamente</h2>
+<br>
+<br>
+
+{% endblock contenidoCategoria %}

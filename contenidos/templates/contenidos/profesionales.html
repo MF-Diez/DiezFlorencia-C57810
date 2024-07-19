@@ -1,0 +1,82 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">  CONTRATA PROFESIONALES</h1>
+    <p class="consectetur_text">Buscá o postulate para que realizar trabajos relacionados al MKT Digital</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+    <h2> Acá van la lista de profesionales</h2>
+
+    <table>
+        <tr>
+            <td width="200"><h2>Sumate a la lista de profesionales</h2></td>
+            <td>
+                <a href="{% url 'profesionalesCreate' %}" 
+                class="btn btn-primary btn-sm">
+                <i class="fa fa-plus fa-lg" title="Sumar"> 
+                </i>
+                </a>
+            </td>        
+        </tr>
+    </table>
+
+    <div class="tabla-contenido">
+        <table class="tabla-consejos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>PROFESIÓN</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>TELÉFONO</th>
+                    <th>EMAIL</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+   
+            <tbody>
+            {% for p in profesionales_list %}
+                <tr>
+                    <td>{{p.id}}</td>
+                    <td>{{p.profesion}}</td>
+                    <td>{{p.nombre}}</td>
+                    <td>{{p.apellido}}</td>
+                    <td>{{p.telefono}}</td>
+                    <td>{{p.mail}}</td>
+                    <td>
+                        <a
+                          href=""
+                          class="btn btn-primary"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                          <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
+                        </a>
+                        <a
+                          href=""
+                          class="btn btn-danger"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                          <i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                        </a>                
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <p>
+        <p>
+        <p>
+    </div>
+{% endblock contenidoCategoria %}
+
+{% block formConsulta%}
+<p>
+<p>
+<p>
+{% endblock formConsulta%}

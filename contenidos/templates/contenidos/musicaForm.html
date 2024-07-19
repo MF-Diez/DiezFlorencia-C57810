@@ -1,0 +1,37 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">  COMPARTÍ LA MUSICA TENDENCIA</h1>
+    <p class="consectetur_text">Agregá las canciones que son tendencias para usar en redes!</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+    <h2> Sumá una nueva canción a la lista de MUSICA TENDENCIA</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="CARGAR">    
+    </form>
+        <p>
+        <p>
+        <p>
+    </div>
+
+{% endblock contenidoCategoria %}
+
+{% block formConsulta%}
+<p>
+<p>
+<p>
+{% endblock formConsulta%}

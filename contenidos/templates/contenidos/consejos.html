@@ -1,0 +1,83 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;"> <strong>CONSEJOS PARA REDES</strong></h1>
+    <p class="consectetur_text">Encontrá y compartí los mejores consejos de Mkt en Redes Sociales</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+<h2 class="about_taital_1"><strong><span style="color: #f7941d;">Los mejores </span> CONSEJOS</strong></h2>
+
+<table>
+    <tr>
+        <td width="200"><h2>Nuevo Consejo</h2></td>
+        <td>
+            <a href="{% url 'consejosForm' %}" 
+            class="btn btn-primary btn-sm">
+            <i class="fa fa-plus fa-lg" title="Crear"> 
+            </i>
+            </a>
+        </td>        
+    </tr>
+</table>
+
+
+    <div class="tabla-contenido">
+        <table class="tabla-consejos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>RED SOCIAL</th>
+                    <th>CONSEJO</th>
+                    <th>AUTOR</th>
+                    <th>ACCIONES</th>
+                    
+                </tr>
+            </thead>
+   
+            <tbody>
+            {% for c in consejos%}
+                <tr>
+                    <td>{{c.id}}</td>
+                    <td>{{c.nombreRed}}</td>
+                    <td>{{c.desarrollo}}</td>
+                    <td>{{c.nombreAutor}}</td>
+                    <td>
+                        <a
+                          href="{% url 'consejoUpdate' c.id %}"
+                          class="btn btn-primary"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                          <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
+                        </a>
+                        <a
+                          href="{% url 'consejoDelete' c.id %}"
+                          class="btn btn-danger"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                          <i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                        </a>                
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <br>
+    </div>
+
+{% endblock contenidoCategoria %}
+
+{% block formConsulta%}
+
+    <br>
+    <br>
+    <br>
+
+{% endblock formConsulta%}

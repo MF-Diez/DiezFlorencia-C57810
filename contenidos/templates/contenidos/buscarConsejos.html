@@ -1,0 +1,38 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">  <strong>BUSCA CONSEJOS POR REDES</strong></h1>
+    <p class="consectetur_text">Filtra por la Red social que necesites y encuentra los mejores consejos!</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+    <div>
+        <h1 class="about_taital_1"><strong><span style="color: #f7941d;">Encontrá los mejores </span> CONSEJOS</strong></h1>
+
+    <form action="{% url 'encontrarConsejos' %}" method="get">
+        {% csrf_token %}
+        <table>
+            <p>Ingresa el nombre de la red social: </p><input type="text" name="buscarConsejos" id="buscarConsejos">
+        </table>
+        <input type="submit" value="BUSCAR">    
+    </form>
+        <p>
+        <p>
+        <p>
+    </div>
+
+{% endblock contenidoCategoria %}
+
+{% block formConsulta%}
+<p>
+<p>
+<p>
+{% endblock formConsulta%}
+

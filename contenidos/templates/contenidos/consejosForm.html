@@ -1,0 +1,37 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">  DEJA TU CONSEJO</h1>
+    <p class="consectetur_text">Compartí lo que sabés sobre Redes para ayudar a los emprendedores</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+    <h2> Escribi tu consejo sobre Mkt Digital</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="CARGAR">    
+    </form>
+        <p>
+        <p>
+        <p>
+    </div>
+
+{% endblock contenidoCategoria %}
+
+{% block formConsulta%}
+<p>
+<p>
+<p>
+{% endblock formConsulta%}

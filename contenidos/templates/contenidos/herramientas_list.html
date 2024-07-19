@@ -1,0 +1,78 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">  HERRAMIENTAS PARA REDES</h1>
+    <p class="consectetur_text">Encontrá y compartí las mejores apps para hacer más fácil tu trabajo en redes</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+    <h2> Acá van las herramientas</h2>
+    <table>
+        <tr>
+            <td width="200"><h2>Nueva Herramienta</h2></td>
+            <td>
+                <a href="{% url 'herramientasCreate' %}" 
+                class="btn btn-primary btn-sm">
+                <i class="fa fa-plus fa-lg" title="Crear"> 
+                </i>
+                </a>
+            </td>        
+        </tr>
+    </table>
+
+    <div class="tabla-contenido">
+        <table class="tabla-consejos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>FUNCIÓN</th>
+                    <th>LINK</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+   
+            <tbody>
+            {% for h in herramientas_list %}
+                <tr>
+                    <td>{{h.id}}</td>
+                    <td>{{h.nombre}}</td>
+                    <td>{{h.funcion}}</td>
+                    <td>{{h.link}}</td>
+                    <td>
+                        <a
+                          href="{% url 'herramientasUpdate' h.id %}"
+                          class="btn btn-primary"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                          <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
+                        </a>
+                        <a
+                          href="{% url 'herramientasDelete' h.id %}"
+                          class="btn btn-danger"
+                          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                          <i class="fa fa-trash fa-sm" title="Delete Record"></i>
+                        </a>                
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <p>
+        <p>
+        <p>
+    </div>
+
+{% endblock contenidoCategoria %}
+
+{% block formConsulta%}
+<p>
+<p>
+<p>
+{% endblock formConsulta%}
