@@ -13,6 +13,8 @@ La web se compone de 4 secciones principales:
 
 Video explicativo
 
+https://www.youtube.com/watch?v=USL5xuQ3Yl8
+
 Principales Tecnologías Usadas
 
     Lenguajes: HTML, CSS, JavaScript y Python
