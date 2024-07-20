@@ -2,7 +2,7 @@
 
 {% block tituloCategoria %}
 <div class="consectetur_text">
-    <h1 style="color: #ffffff;"><strong>LOGIN</strong></h1>
+    <h1 style="color: #ffffff;">  <strong>CAMBIA TU CLAVE</strong></h1>
     <br>
     <br>
     <br>
@@ -11,17 +11,18 @@
 
 {% block contenidoCategoria %}
 
+<td width="200"><h2>Registra una nueva clave para tu cuenta</h2></td>
+
 <form action="" method="post">
 
     {% csrf_token %}
 
-    <table>
-
+    <table >
         {{ form.as_table }}
 
     </table>
 
-    <input type="submit" value="Login">
+    <input type="submit" value="Enviar">
 
 </form>
 

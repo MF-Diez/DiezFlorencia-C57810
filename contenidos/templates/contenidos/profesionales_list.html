@@ -2,7 +2,7 @@
 
 {% block tituloCategoria %}
 <div class="consectetur_text">
-    <h1 style="color: #ffffff;">  CONTRATA PROFESIONALES</h1>
+    <h1 style="color: #ffffff;"> <strong>PROFESIONALES</strong></h1>
     <p class="consectetur_text">Buscá o postulate para que realizar trabajos relacionados al MKT Digital</p>
     <br>
     <br>
@@ -13,11 +13,11 @@
 {% endblock tituloCategoria %}
 
 {% block contenidoCategoria %}
-    <h2> Acá van la lista de profesionales</h2>
+<h2 class="about_taital_1"><strong><span style="color: #f7941d;">Lista de </span> PROFESIONALES</strong></h2>
 
     <table>
         <tr>
-            <td width="200"><h2>Sumate a la lista de profesionales</h2></td>
+            <td width="1000" class="align-right"><h2><strong>Sumate al grupo de profesionales</strong></h2></td>
             <td>
                 <a href="{% url 'profesionalesCreate' %}" 
                 class="btn btn-primary btn-sm">
@@ -54,7 +54,7 @@
                     <td>
                         <a
                           href="{% url 'profesionalesUpdate' p.id %}"
-                          class="btn btn-primary"
+                          class="btn btn-primary2"
                           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                           <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
                         </a>

@@ -17,7 +17,7 @@
 
 <table>
     <tr>
-        <td width="200"><h2>Nuevo Consejo</h2></td>
+        <td width="1000" class="align-right"><h2><strong>Sumá un nuevo consejo</strong></h2></td>
         <td>
             <a href="{% url 'consejosForm' %}" 
             class="btn btn-primary btn-sm">
@@ -27,6 +27,17 @@
         </td>        
     </tr>
 </table>
+<form action="" method="get">
+    {% csrf_token %}
+    <table>
+        <td width="1000" class="align-right"><h2><strong>Buscá el consejo que necesitás</strong><a href="{% url 'buscarConsejos' %}" class="btn btn-info2"
+            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+            <i class="fa fa-search fa-sm" title="Search Record"></i></h2>
+        </td>
+       
+    </table>
+        
+</form>
 
 
     <div class="tabla-contenido">
@@ -52,7 +63,7 @@
                     <td>
                         <a
                           href="{% url 'consejoUpdate' c.id %}"
-                          class="btn btn-primary"
+                          class="btn btn-primary2"
                           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                           <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
                         </a>

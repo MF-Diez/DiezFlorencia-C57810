@@ -1,7 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 import datetime
 
-# modelos de Contenidos de la Aplicacion
+
+# modelos de Contenidos: consejos
 class Consejos(models.Model):
     nombreRed= models.CharField(max_length=50)
     desarrollo= models.CharField(max_length=300)
@@ -16,7 +19,7 @@ class Consejos(models.Model):
         return f"{self.nombreRed}, {self.nombreAutor}"
 
 
-
+# modelos de Contenidos: musica
 class Musica(models.Model):
     fecha= models.DateField(default=datetime.date.today)
     artista= models.CharField(max_length=50)
@@ -32,6 +35,7 @@ class Musica(models.Model):
         return f"{self.titulo}, {self.artista}"
 
 
+# modelos de Contenidos: herramientas
 class Herramientas(models.Model):
     nombre= models.CharField(max_length=50)
     funcion= models.CharField(max_length=300)
@@ -46,6 +50,7 @@ class Herramientas(models.Model):
         return f"{self.nombre}"
     
     
+# modelos de Contenidos: profesionales   
 class Profesionales(models.Model):
     profesion= models.CharField(max_length=50)
     nombre= models.CharField(max_length=50)
@@ -60,4 +65,13 @@ class Profesionales(models.Model):
     
     def __str__(self):
         return f"{self.apellido}, {self.nombre}"
-    
+
+
+# modelos de Contenidos: avatares  
+
+class Avatar(models.Model):   
+    imagen = models.ImageField(upload_to="avatares") 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user} {self.imagen}"    

@@ -32,8 +32,8 @@ html {
 }
 
 body {
-     color: #666666;
-     font-size: 14px;
+     color: #0b0b0b;
+     font-size: 18px;
      font-family: 'Josefin Sans', sans-serif;;
      line-height: 1.80857;
      font-weight: normal;
@@ -142,15 +142,16 @@ a {
     padding-top: 70px;
 }
 
-.header_section{
-	width: 100%; 
-	float: left;
-	background-image: url(../images/banner.png);
-	height: auto;
-	padding-top: 20px;	
-    padding-left: 20px;
-	background-size: cover;
+.header_section {
+    width: 100%; 
+    float: left;
+    background-image: url('/static/images/banner.png');
+    height: 750px; /* Ajustar la altura */
+    background-size: 100% 100%; /* Ajustar el tamaño */
     background-repeat: no-repeat;
+    background-position: center; 
+    padding-top: 20px;	
+    padding-left: 20px;
 }
 
 .active{ 
@@ -158,7 +159,7 @@ a {
 	padding-top: 5px; 
 	padding-bottom: 5px; 
 	color: #000;
-  margin-top: 10px;
+    margin-top: 10px;
 
  }
 
@@ -202,7 +203,7 @@ a {
 .consectetur_text{
 	width: 90%;
 	float: left;
-	font-size: 24px;
+	font-size: 30px;
 	color: #fefcfc;
 	line-height: 50px;
 }
@@ -240,7 +241,7 @@ a {
 .about_section{
 	width: 100%;
 	float: left;
-	background-image: url(../images/about-img.jpg);
+	background-image: url(../images/about-img.png);
 	height: auto;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -267,6 +268,11 @@ a {
 
 }
 
+.align-right {
+    text-align: right;
+}
+
+
 
 .about{
 	padding-top: 715px;
@@ -278,6 +284,16 @@ a {
     text-align: right;
     line-height: 40px;
     width: 45%;
+    float: right;
+    margin-right: 0px;
+}
+
+.magna_text2 {
+    font-size: 12pt;
+    color: #060401;
+    text-align: right;
+    line-height: 20px;
+    width: 80%;
     float: right;
     margin-right: 0px;
 }
@@ -350,7 +366,7 @@ a {
 }
 
 .text {
-  color: #353434;
+  color: #030303;
   font-size: 20pt;
   position: absolute;
   top: 50%;
@@ -373,7 +389,7 @@ a {
 	width: 100%;
 	float: left;
 	font-size: 44pt;
-	color: #353434;
+	color: #030303;
 }
 
 .lorem_text {
@@ -425,7 +441,8 @@ a {
 	width: 100%;
 	float: left;
 	background-image: url(../images/email-img.png);
-	height: auto;
+    height: 580px; /* Ajustar la altura */
+    background-size:100% 100%; /* Ajustar el tamaño */
 	padding-top: 40px;
 	background-size: 130%;
     padding-bottom: 40px;
@@ -518,7 +535,16 @@ button.main_bt {
     max-width: 170px;
     width: 100%;
     margin-right: 10px;
-    border-radius: 25px;
+    border-radius: 10px;
+}
+
+.btn-primary2 {
+    background: #000000;
+    border: indianred;
+    max-width: 170px;
+    width: 40%;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
@@ -566,7 +592,7 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
 	width: 100%;
 	float: left;
 	background-color: #de973a;
-	height: auto;
+	height: auto
 	padding-top: 30px;
 	padding-bottom: 30px; 
 
@@ -596,18 +622,20 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
 
 .footer_section_2{
 	width: 100%;
+    text-align: center;
 	float: left;
-	padding-top: 40px;
+	padding-top: 0px;
 }
 
 .shop_text {
     width: 100%;
-    float: left;
+    text-align: center; /* Centramos el texto horizontalmente */
     font-size: 28px;
     color: #ebebeb;
     font-weight: bold;
-    padding: 25px 0px;
+    padding: 25px 0;
 }
+
 
 .dummy_text {
     width: 100%;
@@ -670,7 +698,7 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
 	width: 100%;
 	float: left;
 	font-size: 12pt;
-	color: #b1b0b0;
+	color: #6d5b43;
 	text-align: center;
 	padding-top: 25px;
 	font-family: Poppins; 
@@ -748,12 +776,12 @@ button.btn.btn-primary, button.btn.btn-primary:hover, button.btn.btn-primary:foc
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 .tabla-consejos {
-    width: 90%;
+    width: 120%;
     max-width: 1200px;
     border-collapse: collapse;
     background-color: rgba(3, 68, 100, 0.85); /* Fondo azul con transparencia al 85% */

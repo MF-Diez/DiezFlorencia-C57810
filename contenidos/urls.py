@@ -14,6 +14,12 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(template_name='contenidos/logout.html'), name='logout'),
     path('registro/',registroUsuario, name="registro"),
     
+#__ Edicion de perfil y creacion de Avatar 
+    path('perfil/',editarPerfil, name="perfil"),
+    path('<int:pk>/password/',CambiarClave.as_view(), name="cambiarClave"),
+    path ('agregar_avatar/',agregarAvatar, name="agregar_avatar"),
+
+    
 #__ Categoria de contenido CONSEJOS
     path('consejos/',consejos, name="consejos"),
     path('consejosForm/',consejosForm, name="consejosForm"),

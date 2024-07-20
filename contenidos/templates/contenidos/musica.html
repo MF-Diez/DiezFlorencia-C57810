@@ -2,7 +2,7 @@
 
 {% block tituloCategoria %}
 <div class="consectetur_text">
-    <h1 style="color: #ffffff;">  MUSICA TENDENCIA</h1>
+    <h1 style="color: #ffffff;"> <strong>MÚSICA TENDENCIA<strong></h1>
     <p class="consectetur_text">Mejorá el posicionamiento de tus publicaciones usando la música tendencia del momento</p>
     <br>
     <br>
@@ -13,11 +13,11 @@
 {% endblock tituloCategoria %}
 
 {% block contenidoCategoria %}
-    <h2> Acá van la musica</h2>
+<h2 class="about_taital_1"><strong><span style="color: #f7941d;">La mejor </span> MÚSICA</strong></h2>
 
     <table>
         <tr>
-            <td width="200"><h2>Nuevo Tema Musical</h2></td>
+            <td width="1000" class="align-right"><h2><strong>Sumá un nuevo tema musical</strong></h2></td>
             <td>
                 <a href="{% url 'musicaForm' %}" 
                 class="btn btn-primary btn-sm">
@@ -27,7 +27,7 @@
             </td>        
         </tr>
     </table>
-
+    
     <div class="tabla-contenido">
         <table class="tabla-consejos">
             <thead>
@@ -52,7 +52,7 @@
                     <td>
                         <a
                           href="{% url 'musicaUpdate' m.id %}"
-                          class="btn btn-primary"
+                          class="btn btn-primary2"
                           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                           <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
                         </a>

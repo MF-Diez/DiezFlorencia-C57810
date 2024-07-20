@@ -45,8 +45,6 @@
 					<div class="menu_text">
 						<ul>
 							
-							<li class="last"><a href="#"><img src="{% static 'images/search-icon.png' %}"></a></li>
-							
 							{% if user.is_authenticated %}
 
 							<li class="active">
@@ -54,11 +52,19 @@
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                              <div class="overlay-content">
 								<p style="color: white">[{{user.first_name}} {{user.last_name}}]</p>
-                             	<a href="{% url 'home' %}">Home</a>
+								<div class="text-center">
+									<a href="{% url 'agregar_avatar' %}"><img src="{{request.session.avatar}}" height="40px" weight="40px" alt="mi foto"></a>
+								</div>
+                             	<a href="{% url 'home' %}">Inicio</a>
                                 <a href="{% url 'consejos' %}">Consejos</a>
                                 <a href="{% url 'musica' %}">Música Tendencia</a>
                                 <a href="{% url 'herramientas' %}">Herramientas</a>
 								<a href="{% url 'profesionales' %}">Profesionales</a>
+								
+								<form method="post" action="{% url 'perfil' %}">
+									{% csrf_token%}
+									<button type="submit" class="btn btn-primary">PERFIL</button>
+								</form>
 								<form method="post" action="{% url 'logout' %}">
 									{% csrf_token%}
 									<button type="submit" class="btn btn-primary">SALIR</button>
@@ -78,19 +84,28 @@
 
 						</ul>
 					</div>
+				</div>			
 			</div>
-		</div>
 		<div class="banner_main">
 			<div class="container">
 				<div class="ram">
 					<div class="row">
 					    <div class="col-sm-12">
 						   {% block tituloCategoria%}
+						   <br>
+						   <br>
+						   <br>
+						   <br>
 							<a><img src="{% static 'images/footer-logo.png' %}" width= 80% ></a>
-						    <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incidid</p>
-						    <div class="banner_bt">
-						    	<button class="read_bt">Read More</button>
-						    </div>
+						    <p class="consectetur_text">La página que todo emprendedor tiene que conocer!</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
 							{% endblock tituloCategoria%}
 					    </div>
 				    </div>
@@ -110,15 +125,14 @@
 		<div class="about_text">
 			<div class="container">
 				{% block contenidoCategoria%}
-				<h1 class="about_taital_1"><strong><span style="color: #f7941d;">About</span> Dogs</strong></h1>
-				<p class="magna_text"> consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-				<div class="about_bt">
-					<button class="more_bt">Read More</button>
-					<br>
-					<br>
-					<br>
-					<br>
-				</div>
+				<h1 class="about_taital_1"><strong><span style="color: #f7941d;">Qué es </span> MKT Colab?</strong></h1>
+				<p class="magna_text"> Bienvenidos a MKT COLAB, un espacio colaborativo diseñado para empoderar a emprendedores en el manejo de sus redes. 
+					Aquí, los usuarios registrados comparten valiosos consejos sobre el uso eficaz de diversas redes sociales, 
+					recomiendan herramientas y aplicaciones que facilitan el trabajo en estas plataformas, y descubren las canciones tendencia 
+					para potenciar sus publicaciones. Además, nuestra comunidad ofrece la posibilidad de cargar y encontrar datos de profesionales del rubro, 
+					creando un espacio ideal para conectar y colaborar. 
+					Sumate a MKT Colab y llevá tus redes sociales al siguiente nivel.</p>
+
 				{% endblock contenidoCategoria%}
 			</div>
 		</div>
@@ -131,7 +145,7 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-sm-12">
-				    <h1 class="get_taital"><strong><span style="color: #ffffff;">Deja tu </span>  Consulta</strong></h1>
+				    <h1 class="get_taital"><strong><span style="color: #ffffff;">Dejá tu </span>  Consulta</strong></h1>
     			</div>
     		</div>
     		<div class="email_box">
@@ -166,60 +180,24 @@
 	<!-- section footer start -->
     <div class="section_footer">
     	<div class="container">
-    		<div class="mail_section">
-    			<ul>
-    				<li class="footer-logo"><img src="images/footer-logo.png"></li>
-    				<li class="footer-logo"><img src="images/map-icon.png"><span class="map_text">Gb road 123 london Uk</span></li>
-    				<li class="footer-logo"><img src="images/call-icon.png"><span class="map_text">(+71) 9876543210</span></li>
-    				<li class="footer-logo"><img src="images/email-icon.png"><span class="map_text">Demo@gmail.com</span></li>
-    			</ul>
-    	    </div> 
+    		
     	    <div class="footer_section_2">
-		        <div class="row">
-    		        <div class="col-sm-6 col-md-6 col-lg-3">
+
+    		     
     		        	<h2 class="shop_text"><a href="{% url 'acerca' %}">Acerca de mi</a></h2>
     		        	
-    		        </div>
-					<div class="col-sm-6 col-md-6 col-lg-3">
-    		        	<h2 class="shop_text">Useful Links</h2>
-    		        	<div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Pet Dictionary</span></div>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Help Links</span></div>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Pet Attitudes</span></div>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Call a Doctor</span></div>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Help a Pet</span></div>
-    		        </div>
-    		        <div class="col-sm-6 col-md-6 col-lg-3">
-    				    <h2 class="shop_text">Overview</h2>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Bacerim Dictionary</span></div>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">Help Links</span></div>
-    				    <div class="image-icon"><img src="images/bulit-icon.png"><span class="pet_text">bacerim Attitudes</span></div>    				
-    		        </div>	
-    			<div class="col-sm-6 col-md-6 col-lg-3">
-    				<h2 class="adderess_text">Instagram</h2>
-    				<div class="footer-img">
-    					<div class="row">
-    						<div class="col-sm-6">
-    							<div class="footer-img"><img src="images/footer-img1.png" style="width: 100%;"></div>
-    							<div class="footer-img"><img src="images/footer-img2.png" style="width: 100%;"></div>
-    						</div>
-    						<div class="col-sm-6">
-    							<div class="footer-img"><img src="images/footer-img3.png" style="width: 100%;"></div>
-    							<div class="footer-img"><img src="images/footer-img4.png" style="width: 100%;"></div>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    			</div>
-    	        </div>
+    		    
+
+    	    </div>
     	        <div class="social-icon">
 	        	    <div class="row">
 	        		    <div class="col-sm-12">
 	        			    <div class="icons">
 	        				    <ul>
-	        					    <li><a href="#"><img src="images/fb-icon.png"></a></li>
-	        					    <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-	        					    <li><a href="#"><img src="images/google-icon.png"></a></li>
-	        					    <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+	        					    <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
+	        					    <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
+	        					    <li><a href="#"><img src="{% static 'images/google-icon.png' %}"></a></li>
+	        					    <li><a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
 	        				    </ul>
 	        			    </div>
 	        		    </div>

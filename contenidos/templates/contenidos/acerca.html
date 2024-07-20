@@ -1,23 +1,31 @@
 {% extends 'contenidos/index.html' %}
+{% load static %}
 
 {% block tituloCategoria %}
-<div class="consectetur_text">
-    <h1 style="color: #ffffff;"> <strong> ACERCA DE MI</strong></h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-</div>
+
+		<img src="{% static 'images/sobre-mi.png' %}" width= 50%  >
+		<p class="consectetur_text">Florencia Diez</p>
+
 {% endblock tituloCategoria %}
 
 {% block contenidoCategoria %}
     <div>
-        <h1 class="about_taital_1"><strong><span style="color: #f7941d;">Un poco sobre </span> QUIEN SOY</strong></h1>
-        <p>
-        <p>
-        <p>
+        <h1 class="about_taital_1"><strong><span style="color: #f7941d;">Un poco </span> SOBRE MI</strong></h1>
+            <p class="magna_text2"> ¡Hola! Soy Florencia Diez, diseñadora industrial, docente y apasionada por la programación. 
+                Aunque estoy dando mis primeros pasos en el mundo del código, ya me siento fascinada por las infinitas posibilidades que ofrece.
+                Mi recorrido profesional no comenzó en la tecnología, sino en el diseño industrial. 
+                <br><br>
+                A lo largo de los años, he tenido la oportunidad de combinar mi amor por el diseño con la enseñanza.
+                La docencia ha sido una experiencia enriquecedora que me ha permitido crecer tanto personal como profesionalmente.
+                
+                Además, hace varios años descubrí el mundo del marketing digital, un campo en el que he trabajado intensamente y que me ha brindado numerosas 
+                satisfacciones. Este proyecto es una extensión natural de mi trayectoria, donde fusiono mis habilidades en diseño y marketing con mi nueva pasión por la programación.
+                <br><br>
+                En esta plataforma colaborativa, mi objetivo es ayudar a emprendedores a gestionar sus redes sociales de manera efectiva, compartiendo consejos, 
+                herramientas y tendencias que faciliten su trabajo. Creo firmemente en el poder del conocimiento compartido y en la importancia de mantenerse actualizado
+                 en un mundo digital en constante evolución.
+                 <br><br>
+                ¡Gracias por acompañarme en este viaje!.</p>
     </div>
 
 {% endblock contenidoCategoria %}

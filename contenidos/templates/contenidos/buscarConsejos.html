@@ -2,8 +2,8 @@
 
 {% block tituloCategoria %}
 <div class="consectetur_text">
-    <h1 style="color: #ffffff;">  <strong>BUSCA CONSEJOS POR REDES</strong></h1>
-    <p class="consectetur_text">Filtra por la Red social que necesites y encuentra los mejores consejos!</p>
+    <h1 style="color: #ffffff;">  <strong>BUSCÁ CONSEJOS POR RED SOCIAL</strong></h1>
+    <p class="consectetur_text">Filtrá por la Red social que necesites y encontrá los mejores consejos!</p>
     <br>
     <br>
     <br>
@@ -14,14 +14,16 @@
 
 {% block contenidoCategoria %}
     <div>
-        <h1 class="about_taital_1"><strong><span style="color: #f7941d;">Encontrá los mejores </span> CONSEJOS</strong></h1>
+        <h1 class="about_taital_1"><strong><span style="color: #f7941d;">Filtrá los  </span> CONSEJOS</strong></h1>
 
     <form action="{% url 'encontrarConsejos' %}" method="get">
         {% csrf_token %}
         <table>
-            <p>Ingresa el nombre de la red social: </p><input type="text" name="buscarConsejos" id="buscarConsejos">
+            <td width="1000" class="align-right"><h2><strong>Ingresa el nombre de la red social: </strong></th>
+            <p><input type="text" name="buscarConsejos" id="buscarConsejos"></p>
+            <p width="500" class="align-right"><input type="submit" value="BUSCAR"></p>  
         </table>
-        <input type="submit" value="BUSCAR">    
+        
     </form>
         <p>
         <p>

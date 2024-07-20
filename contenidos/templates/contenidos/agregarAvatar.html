@@ -1,0 +1,37 @@
+{% extends 'contenidos/index.html' %}
+
+{% block tituloCategoria %}
+<div class="consectetur_text">
+    <h1 style="color: #ffffff;">TU AVATAR</h1>
+    <br>
+    <br>
+    <br>
+</div>
+{% endblock tituloCategoria %}
+
+{% block contenidoCategoria %}
+
+<h1 class="about_taital_1"><strong><span style="color: #f7941d;">Cambiá tu  </span> AVATAR</strong></h1>
+<br>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data"  >
+
+    {% csrf_token %}
+
+    <table  >
+        
+
+        {{ form.as_table }}
+         
+
+    </table>
+
+    <input type="submit" value="Actualizar Avatar"  >
+    <br>
+    <br>
+
+
+</form>
+
+{% endblock contenidoCategoria %}

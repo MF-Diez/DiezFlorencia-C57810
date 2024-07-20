@@ -2,7 +2,7 @@
 
 {% block tituloCategoria %}
 <div class="consectetur_text">
-    <h1 style="color: #ffffff;">  HERRAMIENTAS PARA REDES</h1>
+    <h1 style="color: #ffffff;"> <strong>HERRAMIENTAS PARA REDES</strong></h1>
     <p class="consectetur_text">Encontrá y compartí las mejores apps para hacer más fácil tu trabajo en redes</p>
     <br>
     <br>
@@ -13,10 +13,10 @@
 {% endblock tituloCategoria %}
 
 {% block contenidoCategoria %}
-    <h2> Acá van las herramientas</h2>
+<h2 class="about_taital_1"><strong><span style="color: #f7941d;">Los mejores </span> HERRAMIENTAS</strong></h2>
     <table>
         <tr>
-            <td width="200"><h2>Nueva Herramienta</h2></td>
+            <td width="1000" class="align-right"><h2><strong>Sumá una nueva herramienta</strong></h2></td>
             <td>
                 <a href="{% url 'herramientasCreate' %}" 
                 class="btn btn-primary btn-sm">
@@ -49,7 +49,7 @@
                     <td>
                         <a
                           href="{% url 'herramientasUpdate' h.id %}"
-                          class="btn btn-primary"
+                          class="btn btn-primary2"
                           style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
                           <i class="fa fa-edit fa-sm" title="Edit Record"></i>        
                         </a>
