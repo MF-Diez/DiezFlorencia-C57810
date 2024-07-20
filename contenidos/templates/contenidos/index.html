@@ -37,9 +37,11 @@
 	<!-- section banner start -->
 	<div class="header_section">
 		<div class="container-fluid">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-md-4">
-					<div><a href="{% url 'home' %}"><img src="{% static 'images/logoweb.png' %}" width= 15% ></a></div>
+					<div><a href="{% url 'home' %}">
+						<img src="{% static 'images/logoweb.png' %}" width= 15% >
+					</a></div>
 				</div>
 				<div class="col-md-8">
 					<div class="menu_text">
@@ -48,44 +50,43 @@
 							{% if user.is_authenticated %}
 
 							<li class="active">
-							 <div id="myNav" class="overlay">
-                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                             <div class="overlay-content">
-								<p style="color: white">[{{user.first_name}} {{user.last_name}}]</p>
-								<div class="text-center">
-									<a href="{% url 'agregar_avatar' %}"><img src="{{request.session.avatar}}" height="40px" weight="40px" alt="mi foto"></a>
-								</div>
-                             	<a href="{% url 'home' %}">Inicio</a>
-                                <a href="{% url 'consejos' %}">Consejos</a>
-                                <a href="{% url 'musica' %}">Música Tendencia</a>
-                                <a href="{% url 'herramientas' %}">Herramientas</a>
-								<a href="{% url 'profesionales' %}">Profesionales</a>
-								
-								<form method="post" action="{% url 'perfil' %}">
-									{% csrf_token%}
-									<button type="submit" class="btn btn-primary">PERFIL</button>
-								</form>
-								<form method="post" action="{% url 'logout' %}">
-									{% csrf_token%}
-									<button type="submit" class="btn btn-primary">SALIR</button>
-								</form>
-                              </div>
-                            </div>
-                             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-                            </div>	
+								<div id="myNav" class="overlay">
+                                	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                             		<div class="overlay-content">
+										<p style="color: white">[{{user.first_name}} {{user.last_name}}]</p>
+										<div class="text-center">
+											<a href="{% url 'agregar_avatar' %}">
+												<img src="{{request.session.avatar}}" height="40px" weight="40px" alt="mi foto">
+											</a>
+										</div>
+                             			<a href="{% url 'home' %}">Inicio</a>
+                               			<a href="{% url 'consejos' %}">Consejos</a>
+                                		<a href="{% url 'musica' %}">Música Tendencia</a>
+                                		<a href="{% url 'herramientas' %}">Herramientas</a>
+										<a href="{% url 'profesionales' %}">Profesionales</a>
+										<form method="post" action="{% url 'perfil' %}">
+											{% csrf_token%}
+											<button type="submit" class="btn btn-light">PERFIL</button>
+										</form>
+										<form method="post" action="{% url 'logout' %}">
+											{% csrf_token%}
+											<button type="submit" class="btn btn-light">SALIR</button>
+										</form>
+                              		</div>
+                            	</div>
+                             	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>	
                             </li>
+						{% else %}
+							<li class="last"><a href="{% url 'login' %}">INGRESAR</a></li>
+							<li class="last"><a href="{% url 'registro' %}">REGISTRARSE</a></li>
 
-							{% else %}
-								<li class="last"><a href="{% url 'login' %}">INGRESAR</a></li>
-								<li class="last"><a href="{% url 'registro' %}">REGISTRARSE</a></li>
-
-							{% endif %}
-
-
+						{% endif %}
 						</ul>
 					</div>
 				</div>			
 			</div>
+		</div>
+		
 		<div class="banner_main">
 			<div class="container">
 				<div class="ram">
